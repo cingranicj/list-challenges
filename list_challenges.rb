@@ -1,19 +1,19 @@
-# def threed(list, number)
-#     count = 0
-#     list.each do |n|
-#         if list[n] == list[n-1] && n == 3
-#             return false
-#         end
-#         if n == number
-#             count += 1
-#         end
-#     end
-#     if count == 3
-#         return true
-#     else
-#         return false
-#     end
-# end
+def threed(list, number)
+    count = 0
+    list.each do |n|
+       if list[n] == list[n-1] && n == 3
+            return false
+       end
+        if n == number
+            count += 1
+        end
+    end
+    if count == 3
+        return true
+    else
+        return false
+    end
+end
 
 # puts threed([3, 1, 4, 1, 3, 1, 3], 3) # true
 # puts threed([3, 3, 3, 3], 3) # false
@@ -22,24 +22,24 @@
 
 
 
-# def  same_first_last(list)
-#     if list[0] == list[list.size - 1] && list.size >= 1
-#         return true
-#     end
-#     return false
-# end
+def  same_first_last(list)
+   if list[0] == list[list.size - 1] && list.size >= 1
+        return true
+    end
+    return false
+end
 
 # puts same_first_last([1, 2, 3, 1]) # true
 # puts same_first_last([1]) # true
 # puts same_first_last([1, 2, 3, 4]) # false
 # puts same_first_last([]) # false
 
-# def get_sandwich(sandwich)
-#     count = 0
-#     (sandwich.size - 4).times do [i]
+def get_sandwich(sandwich)
+    count = 0
+    (sandwich.size - 4).times do [i]
 
-#     end
-# end
+    end
+end
 
 # puts("breadcheesemeatbread")
 
@@ -59,25 +59,25 @@ def shift_left(array)
     return new_array
 end
 
-print shift_left([1, 2, 3, 4, 5, 6]) # 4, 1, 2, 3
+# print shift_left([1, 2, 3, 4, 5, 6]) # 2, 3, 4, 5, 6, 1
 
-# def g_happy(str)
-#     (str.size 1).times do |x|
-#         slice = str[x + 1..(str.size + 1)]
-#         if slice == "gg"
-#             return true
-#         end
-#     end
-# end
+def g_happy(str)
+    (str.size 1).times do |x|
+        slice = str[x + 1..(str.size + 1)]
+        if slice == "gg"
+            return true
+        end
+    end
+end
 
 # puts g_happy("ffffffffffffggg")
 # puts g_happy("fuuf")
 # puts g_happy("ggg")
 
-# def merge(list1, list2)
-#     new_list = list1 + list2
-#     new_list.sort
-# end
+def merge(list1, list2)
+    new_list = list1 + list2
+    new_list.sort
+end
 list1 = [1, 2, 3]
 list2 = [4, 2, 3]
 # print merge(list1, list2)
@@ -95,4 +95,17 @@ def middle_way(list1, list2)
 end
 
 # print middle_way(list1, list2)
+
+def either_2_4(list)
+    list.size.times do |n|
+        slice = list[n..(list.size + 1)]
+            if slice == "22" || slice == "44"
+                return true
+            elsif slice == "22" && slice == "44"
+        end
+    end
+end
+
+puts either_2_4([1, 2, 2, 3, 4, 5]) # true
+puts either_2_4([2, 2, 4, 4]) # false
 
