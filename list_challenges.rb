@@ -36,9 +36,17 @@ end
 
 def get_sandwich(sandwich)
     count = 0
-    (sandwich.size - 4).times do [i]
-
+    (sandwich.size - 4).times do |i|
+        slice = sandwich[i..(i + 4)]
+        puts slice
+        if sandwich[i, (i + 4)] == "bread"
+            count += 1
+        end
+        if slice == "bread"
+            puts slice
+        end
     end
+    return count
 end
 
 # puts("breadcheesemeatbread")
@@ -102,10 +110,12 @@ def either_2_4(list)
             if slice == "22" || slice == "44"
                 return true
             elsif slice == "22" && slice == "44"
+                return false
         end
     end
+    return true
 end
 
-puts either_2_4([1, 2, 2, 3, 4, 5]) # true
-puts either_2_4([2, 2, 4, 4]) # false
+# puts either_2_4([1, 2, 2, 3, 4, 5]) # true
+# puts either_2_4([2, 2, 4, 4]) # false
 
