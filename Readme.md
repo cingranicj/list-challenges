@@ -1,10 +1,10 @@
 # List Challenges
 
-## List Challenges that I have worked on and completed:
+## List Challenges that I have worked on during class:
 
 * threed
 * same_first_last
-* get_sandwich
+* get_sandwich (code not working)
 * shift_left
 * g_happy
 * merge
