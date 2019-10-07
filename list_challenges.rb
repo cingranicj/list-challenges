@@ -106,16 +106,32 @@ end
 
 def either_2_4(list)
     list.size.times do |n|
-        slice = list[n..(list.size + 1)]
-            if slice == "22" || slice == "44"
+        slice = list[n..(list.size + 2)]
+            if slice == 22 || slice == 44
                 return true
-            elsif slice == "22" && slice == "44"
+            end
+            if slice == 22 && slice == 44
                 return false
         end
     end
-    return true
+    return false
 end
 
 # puts either_2_4([1, 2, 2, 3, 4, 5]) # true
 # puts either_2_4([2, 2, 4, 4]) # false
+
+def e2_4(list)
+    list.size.times do |x|
+        if x == 4 && x == 2
+            return false
+        end
+        if x == 4
+            return true
+        end
+    end
+    return false
+end
+
+puts e2_4[(1, 2, 2, 3, 6)] # true
+puts e2_4[(1, 2, 3, 4, 4)] # true
 
